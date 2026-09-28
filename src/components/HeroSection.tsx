@@ -38,7 +38,7 @@ export default function HeroSection({ onLearnMoreClick, onExploreClick }: HeroSe
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md pt-2">
             <div className="rounded-lg overflow-hidden bg-[#f0eee8] border border-[#d5c3bb] shadow-sm aspect-[4/3] group relative">
               <img
-                src="/src/public/cocina.png"
+                src="/cocina.png"
                 alt="Cocina"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -59,7 +59,7 @@ export default function HeroSection({ onLearnMoreClick, onExploreClick }: HeroSe
         {/* Right Column: Hero Master Image */}
         <div className="lg:col-span-6 relative h-[280px] sm:h-[400px] lg:h-auto min-h-[280px]">
           <img
-            src="/src/public/veta2.png"
+            src="/veta2.png"
             alt="Veta de madera"
             className="w-full h-full object-cover"
           />

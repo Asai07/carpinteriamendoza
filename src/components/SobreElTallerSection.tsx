@@ -13,7 +13,7 @@ export default function SobreElTallerSection({ onLearnMoreAboutUs }: SobreElTall
             {/* Imagen Principal Modernizada */}
             <div className="relative rounded-[2rem] overflow-hidden bg-[#fcf9f3] border border-[#d5c3bb] shadow-xl group">
               <img
-                src="/src/public/cocina2.jpg"
+                src="/cocina2.jpg"
                 alt="Cocina terminada"
                 className="w-full h-[340px] sm:h-[460px] md:h-[560px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100"
               />
