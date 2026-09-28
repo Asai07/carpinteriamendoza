@@ -28,7 +28,7 @@ export default function Header({ currentScreen, onNavigate, onOpenQuoteModal }: 
   const navItemClass = (screen: ScreenType) => {
     const isActive = currentScreen === screen;
     return `relative text-[10px] font-bold tracking-[0.2em] uppercase transition-colors duration-500 py-2 group ${
-      isActive ? 'text-[#bd5338]' : 'text-[#5c4a3d] hover:text-[#3a2618]'
+      isActive ? 'text-[#e3000f]' : 'text-[#cccccc] hover:text-[#ffffff]'
     }`;
   };
 
@@ -36,8 +36,8 @@ export default function Header({ currentScreen, onNavigate, onOpenQuoteModal }: 
     <header 
       className={`w-full sticky top-0 z-50 transition-all duration-700 ease-in-out ${
         isScrolled 
-          ? 'bg-[#f0e6d2]/90 backdrop-blur-md border-b border-[#3a2618]/10 py-3 shadow-sm' 
-          : 'bg-[#fcf9f3] py-5'
+          ? 'bg-[#151515]/90 backdrop-blur-md border-b border-[#333333] py-3 shadow-sm' 
+          : 'bg-[#111111] py-5'
       }`}
     >
       <div className="w-full flex items-center justify-between px-4 sm:px-8 lg:px-16 max-w-[1600px] mx-auto">
@@ -46,10 +46,10 @@ export default function Header({ currentScreen, onNavigate, onOpenQuoteModal }: 
           onClick={() => handleNavClick('inicio')}
           className="flex flex-col items-start group focus:outline-none"
         >
-          <span className="font-serif text-xl sm:text-2xl lg:text-[28px] font-bold tracking-tighter text-[#3a2618] leading-none mb-1 group-hover:opacity-70 transition-opacity duration-500">
+          <span className="font-serif text-xl sm:text-2xl lg:text-[28px] font-bold tracking-tighter text-[#ffffff] leading-none mb-1 group-hover:opacity-70 transition-opacity duration-500">
             Carpintería Mendoza
           </span>
-          <span className="text-[8px] tracking-[0.35em] uppercase text-[#83746d] font-semibold">
+          <span className="text-[8px] tracking-[0.35em] uppercase text-[#888888] font-semibold">
             Taller de Carpintería
           </span>
         </button>
@@ -58,22 +58,22 @@ export default function Header({ currentScreen, onNavigate, onOpenQuoteModal }: 
         <nav className="hidden md:flex items-center space-x-10 lg:space-x-12">
           <button onClick={() => handleNavClick('inicio')} className={navItemClass('inicio')}>
             Inicio
-            <span className={`absolute bottom-0 left-0 w-full h-[1px] bg-[#bd5338] transform origin-left transition-transform duration-500 ease-out ${currentScreen === 'inicio' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+            <span className={`absolute bottom-0 left-0 w-full h-[1px] bg-[#e3000f] transform origin-left transition-transform duration-500 ease-out ${currentScreen === 'inicio' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
           </button>
           
-          <button onClick={() => handleNavClick('inicio', 'galeria')} className="relative text-[10px] font-bold tracking-[0.2em] uppercase transition-colors duration-500 py-2 group text-[#5c4a3d] hover:text-[#3a2618]">
+          <button onClick={() => handleNavClick('inicio', 'galeria')} className="relative text-[10px] font-bold tracking-[0.2em] uppercase transition-colors duration-500 py-2 group text-[#cccccc] hover:text-[#ffffff]">
             Galería
-            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#bd5338] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></span>
+            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#e3000f] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></span>
           </button>
 
           <button onClick={() => handleNavClick('servicios')} className={navItemClass('servicios')}>
             Servicios
-            <span className={`absolute bottom-0 left-0 w-full h-[1px] bg-[#bd5338] transform origin-left transition-transform duration-500 ease-out ${currentScreen === 'servicios' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+            <span className={`absolute bottom-0 left-0 w-full h-[1px] bg-[#e3000f] transform origin-left transition-transform duration-500 ease-out ${currentScreen === 'servicios' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
           </button>
 
-          <button onClick={() => handleNavClick('inicio', 'maderas')} className="relative text-[10px] font-bold tracking-[0.2em] uppercase transition-colors duration-500 py-2 group text-[#5c4a3d] hover:text-[#3a2618]">
+          <button onClick={() => handleNavClick('inicio', 'maderas')} className="relative text-[10px] font-bold tracking-[0.2em] uppercase transition-colors duration-500 py-2 group text-[#cccccc] hover:text-[#ffffff]">
             Materiales
-            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#bd5338] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></span>
+            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#e3000f] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></span>
           </button>
         </nav>
 
@@ -81,7 +81,7 @@ export default function Header({ currentScreen, onNavigate, onOpenQuoteModal }: 
         <div className="flex items-center gap-8">
           <button
             onClick={() => handleNavClick('inicio', 'contacto')}
-            className="hidden md:inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-[#3a2618]/30 bg-transparent text-[#3a2618] hover:bg-[#3a2618] hover:text-[#f0e6d2] hover:border-[#3a2618] font-bold text-[9px] tracking-[0.25em] uppercase transition-all duration-500"
+            className="hidden md:inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-[#333333] bg-transparent text-[#ffffff] hover:bg-[#0a0a0a] hover:text-[#f5f5f5] hover:border-[#333333] font-bold text-[9px] tracking-[0.25em] uppercase transition-all duration-500"
           >
             Contacto
           </button>
@@ -89,7 +89,7 @@ export default function Header({ currentScreen, onNavigate, onOpenQuoteModal }: 
           {/* Custom Minimalist Hamburger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-[#3a2618] focus:outline-none z-50 relative"
+            className="md:hidden p-2 text-[#ffffff] focus:outline-none z-50 relative"
             aria-label="Menú"
           >
             <div className="flex flex-col justify-center items-end gap-[5px] w-6 h-6">
@@ -103,41 +103,41 @@ export default function Header({ currentScreen, onNavigate, onOpenQuoteModal }: 
 
       {/* Mobile Menu Overlay - Awwwards Style */}
       <div 
-        className={`fixed inset-0 bg-[#f0e6d2] z-40 transition-all duration-700 ease-in-out flex flex-col justify-center px-6 sm:px-10 ${
+        className={`fixed inset-0 bg-[#151515] z-40 transition-all duration-700 ease-in-out flex flex-col justify-center px-6 sm:px-10 ${
           mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
         <div className={`flex flex-col space-y-6 transform transition-transform duration-700 delay-100 ${mobileMenuOpen ? 'translate-y-0' : 'translate-y-12'}`}>
           <button
             onClick={() => handleNavClick('inicio')}
-            className="text-left font-serif text-4xl sm:text-5xl text-[#3a2618] hover:text-[#bd5338] transition-colors duration-500"
+            className="text-left font-serif text-4xl sm:text-5xl text-[#ffffff] hover:text-[#e3000f] transition-colors duration-500"
           >
             Inicio
           </button>
 
           <button
             onClick={() => handleNavClick('inicio', 'galeria')}
-            className="text-left font-serif text-4xl sm:text-5xl text-[#3a2618] hover:text-[#bd5338] transition-colors duration-500"
+            className="text-left font-serif text-4xl sm:text-5xl text-[#ffffff] hover:text-[#e3000f] transition-colors duration-500"
           >
             Galería
           </button>
           <button
             onClick={() => handleNavClick('servicios')}
-            className="text-left font-serif text-4xl sm:text-5xl text-[#3a2618] hover:text-[#bd5338] transition-colors duration-500"
+            className="text-left font-serif text-4xl sm:text-5xl text-[#ffffff] hover:text-[#e3000f] transition-colors duration-500"
           >
             Servicios
           </button>
           <button
             onClick={() => handleNavClick('inicio', 'maderas')}
-            className="text-left font-serif text-4xl sm:text-5xl text-[#3a2618] hover:text-[#bd5338] transition-colors duration-500"
+            className="text-left font-serif text-4xl sm:text-5xl text-[#ffffff] hover:text-[#e3000f] transition-colors duration-500"
           >
             Materiales
           </button>
           
-          <div className="pt-8 mt-8 border-t border-[#3a2618]/10">
+          <div className="pt-8 mt-8 border-t border-[#333333]">
             <button
               onClick={() => handleNavClick('inicio', 'contacto')}
-              className="inline-flex px-8 py-4 rounded-full bg-[#3a2618] text-[#f0e6d2] font-bold text-[10px] tracking-[0.2em] uppercase transition-all duration-500"
+              className="inline-flex px-8 py-4 rounded-full bg-[#0a0a0a] text-[#f5f5f5] font-bold text-[10px] tracking-[0.2em] uppercase transition-all duration-500"
             >
               Contacto
             </button>

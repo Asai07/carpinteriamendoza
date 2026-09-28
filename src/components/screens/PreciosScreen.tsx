@@ -112,27 +112,27 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
   };
 
   return (
-    <div className="bg-[#fcf9f3] py-16 lg:py-24">
+    <div className="bg-[#111111] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* Breadcrumb */}
         <div className="mb-8">
-          <div className="flex items-center gap-2 text-xs text-[#895110] mb-3">
+          <div className="flex items-center gap-2 text-xs text-[#e3000f] mb-3">
             <button
               onClick={() => onNavigate('inicio')}
-              className="hover:underline text-[#50443e]"
+              className="hover:underline text-[#aaaaaa]"
             >
               Inicio
             </button>
             <span>/</span>
             <span className="font-semibold uppercase tracking-wider">Precios & Tarifas</span>
           </div>
-          <span className="text-xs uppercase tracking-widest text-[#895110] font-semibold block mb-2">
+          <span className="text-xs uppercase tracking-widest text-[#e3000f] font-semibold block mb-2">
             Transparencia de Oficio
           </span>
-          <h1 className="font-serif text-3xl sm:text-5xl text-[#412311] leading-tight max-w-3xl">
+          <h1 className="font-serif text-3xl sm:text-5xl text-[#ffffff] leading-tight max-w-3xl">
             Simulador de Tarifas & Configuración a Medida
           </h1>
-          <p className="text-sm sm:text-base text-[#50443e] font-light mt-3 max-w-2xl">
+          <p className="text-sm sm:text-base text-[#aaaaaa] font-light mt-3 max-w-2xl">
             Nuestros precios reflejan con honestidad las horas dedicadas en banco, el volumen de madera noble estacionada y los ensambles tallados a mano.
           </p>
         </div>
@@ -142,8 +142,8 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
           {/* Controls Column Left */}
           <div className="lg:col-span-7 space-y-8">
             {/* Step 1: Piece Type */}
-            <div className="bg-[#f0eee8] p-6 rounded-xl border border-[#d5c3bb]">
-              <span className="text-xs font-bold text-[#895110] uppercase tracking-wider block mb-3">
+            <div className="bg-[#1c1c1c] p-6 rounded-xl border border-[#444444]">
+              <span className="text-xs font-bold text-[#e3000f] uppercase tracking-wider block mb-3">
                 1. Selecciona la tipología de pieza
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -153,8 +153,8 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
                     onClick={() => handlePieceSelect(piece)}
                     className={`p-3 text-left rounded-lg border text-xs transition-all ${
                       selectedPieceId === piece.id
-                        ? 'bg-[#412311] text-white border-[#412311] shadow-sm'
-                        : 'bg-white text-[#412311] border-[#d5c3bb] hover:border-[#895110]'
+                        ? 'bg-[#111111] text-white border-[#333333] shadow-sm'
+                        : 'bg-[#151515] text-[#ffffff] border-[#444444] hover:border-[#e3000f]'
                     }`}
                   >
                     <span className="font-semibold block text-sm">{piece.name}</span>
@@ -165,21 +165,21 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
             </div>
 
             {/* Step 2: Dimensions */}
-            <div className="bg-[#f0eee8] p-6 rounded-xl border border-[#d5c3bb]">
+            <div className="bg-[#1c1c1c] p-6 rounded-xl border border-[#444444]">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-3 gap-1">
-                <span className="text-xs font-bold text-[#895110] uppercase tracking-wider">
+                <span className="text-xs font-bold text-[#e3000f] uppercase tracking-wider">
                   2. Ajusta las dimensiones deseadas
                 </span>
-                <span className="text-xs text-[#50443e] font-light">
+                <span className="text-xs text-[#aaaaaa] font-light">
                   {length} cm × {width} cm (Grosor aprox: {currentPiece.defaultThickness} cm)
                 </span>
               </div>
 
               <div className="space-y-4 pt-2">
                 <div>
-                  <div className="flex justify-between text-xs text-[#412311] font-semibold mb-1">
+                  <div className="flex justify-between text-xs text-[#ffffff] font-semibold mb-1">
                     <span>Largo de la pieza:</span>
-                    <span className="text-[#895110] font-bold">{length} cm</span>
+                    <span className="text-[#e3000f] font-bold">{length} cm</span>
                   </div>
                   <input
                     type="range"
@@ -188,18 +188,18 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
                     step="5"
                     value={length}
                     onChange={(e) => setLength(Number(e.target.value))}
-                    className="w-full accent-[#412311] cursor-pointer"
+                    className="w-full accent-[#111111] cursor-pointer"
                   />
-                  <div className="flex justify-between text-[10px] text-[#50443e]">
+                  <div className="flex justify-between text-[10px] text-[#aaaaaa]">
                     <span>Min: {Math.round(currentPiece.defaultLength * 0.6)} cm</span>
                     <span>Max: {Math.round(currentPiece.defaultLength * 1.6)} cm</span>
                   </div>
                 </div>
 
                 <div>
-                  <div className="flex justify-between text-xs text-[#412311] font-semibold mb-1">
+                  <div className="flex justify-between text-xs text-[#ffffff] font-semibold mb-1">
                     <span>Ancho / Fondo:</span>
-                    <span className="text-[#895110] font-bold">{width} cm</span>
+                    <span className="text-[#e3000f] font-bold">{width} cm</span>
                   </div>
                   <input
                     type="range"
@@ -208,9 +208,9 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
                     step="5"
                     value={width}
                     onChange={(e) => setWidth(Number(e.target.value))}
-                    className="w-full accent-[#412311] cursor-pointer"
+                    className="w-full accent-[#111111] cursor-pointer"
                   />
-                  <div className="flex justify-between text-[10px] text-[#50443e]">
+                  <div className="flex justify-between text-[10px] text-[#aaaaaa]">
                     <span>Min: {Math.round(currentPiece.defaultWidth * 0.6)} cm</span>
                     <span>Max: {Math.round(currentPiece.defaultWidth * 1.5)} cm</span>
                   </div>
@@ -219,8 +219,8 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
             </div>
 
             {/* Step 3: Wood Species */}
-            <div className="bg-[#f0eee8] p-6 rounded-xl border border-[#d5c3bb]">
-              <span className="text-xs font-bold text-[#895110] uppercase tracking-wider block mb-3">
+            <div className="bg-[#1c1c1c] p-6 rounded-xl border border-[#444444]">
+              <span className="text-xs font-bold text-[#e3000f] uppercase tracking-wider block mb-3">
                 3. Especie de madera noble
               </span>
               <div className="space-y-2">
@@ -229,8 +229,8 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
                     key={wood.name}
                     className={`flex items-start gap-3 p-3 rounded-lg border text-xs cursor-pointer transition-colors ${
                       selectedWood === wood.name
-                        ? 'bg-white border-[#412311] shadow-2xs'
-                        : 'bg-white/60 border-[#d5c3bb] hover:bg-white'
+                        ? 'bg-[#151515] border-[#333333] shadow-2xs'
+                        : 'bg-[#151515]/60 border-[#444444] hover:bg-[#151515]'
                     }`}
                   >
                     <input
@@ -238,16 +238,16 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
                       name="wood_radio"
                       checked={selectedWood === wood.name}
                       onChange={() => setSelectedWood(wood.name)}
-                      className="mt-0.5 accent-[#412311]"
+                      className="mt-0.5 accent-[#111111]"
                     />
                     <div className="flex-1">
                       <div className="flex justify-between items-baseline">
-                        <span className="font-semibold text-[#412311] text-sm">{wood.name}</span>
-                        <span className="text-[11px] text-[#895110] font-medium">
+                        <span className="font-semibold text-[#ffffff] text-sm">{wood.name}</span>
+                        <span className="text-[11px] text-[#e3000f] font-medium">
                           {wood.multiplier > 1.0 ? `+${Math.round((wood.multiplier - 1) * 100)}%` : 'Base estándar'}
                         </span>
                       </div>
-                      <p className="text-[#50443e] font-light mt-0.5">{wood.desc}</p>
+                      <p className="text-[#aaaaaa] font-light mt-0.5">{wood.desc}</p>
                     </div>
                   </label>
                 ))}
@@ -255,19 +255,19 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
             </div>
 
             {/* Step 4: Finish & Joinery */}
-            <div className="bg-[#f0eee8] p-6 rounded-xl border border-[#d5c3bb]">
-              <span className="text-xs font-bold text-[#895110] uppercase tracking-wider block mb-3">
+            <div className="bg-[#1c1c1c] p-6 rounded-xl border border-[#444444]">
+              <span className="text-xs font-bold text-[#e3000f] uppercase tracking-wider block mb-3">
                 4. Acabado botánico & uniones estructurales
               </span>
               
               <div className="mb-4">
-                <label className="block text-xs text-[#412311] font-semibold mb-1">
+                <label className="block text-xs text-[#ffffff] font-semibold mb-1">
                   Tratamiento de acabado superficial:
                 </label>
                 <select
                   value={selectedFinish}
                   onChange={(e) => setSelectedFinish(e.target.value)}
-                  className="w-full bg-white border border-[#d5c3bb] rounded-lg p-2.5 text-xs text-[#412311] focus:outline-none focus:ring-1 focus:ring-[#412311]"
+                  className="w-full bg-[#151515] border border-[#444444] rounded-lg p-2.5 text-xs text-[#ffffff] focus:outline-none focus:ring-1 focus:ring-[#333333]"
                 >
                   {FINISH_OPTIONS.map((f) => (
                     <option key={f.name} value={f.name}>
@@ -278,13 +278,13 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
               </div>
 
               <div>
-                <label className="block text-xs text-[#412311] font-semibold mb-1">
+                <label className="block text-xs text-[#ffffff] font-semibold mb-1">
                   Detalle de ensamble destacado:
                 </label>
                 <select
                   value={selectedJoinery}
                   onChange={(e) => setSelectedJoinery(e.target.value)}
-                  className="w-full bg-white border border-[#d5c3bb] rounded-lg p-2.5 text-xs text-[#412311] focus:outline-none focus:ring-1 focus:ring-[#412311]"
+                  className="w-full bg-[#151515] border border-[#444444] rounded-lg p-2.5 text-xs text-[#ffffff] focus:outline-none focus:ring-1 focus:ring-[#333333]"
                 >
                   {JOINERY_OPTIONS.map((j) => (
                     <option key={j.name} value={j.name}>
@@ -297,62 +297,62 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
           </div>
 
           {/* Sticky Estimation Receipt Right */}
-          <div className="lg:col-span-5 lg:sticky lg:top-28 bg-[#fcf9f3] p-5 sm:p-6 md:p-8 rounded-xl border border-[#d5c3bb] shadow-lg">
-            <div className="flex items-center justify-between pb-4 border-b border-[#d5c3bb]">
+          <div className="lg:col-span-5 lg:sticky lg:top-28 bg-[#111111] p-5 sm:p-6 md:p-8 rounded-xl border border-[#444444] shadow-lg">
+            <div className="flex items-center justify-between pb-4 border-b border-[#444444]">
               <div>
-                <span className="text-[11px] uppercase tracking-widest text-[#895110] font-semibold block">
+                <span className="text-[11px] uppercase tracking-widest text-[#e3000f] font-semibold block">
                   Presupuesto Orientativo
                 </span>
-                <h3 className="font-serif text-2xl text-[#412311]">
+                <h3 className="font-serif text-2xl text-[#ffffff]">
                   Resumen de Configuración
                 </h3>
               </div>
-              <span className="w-9 h-9 rounded-full bg-[#d4e8cf] text-[#1e382b] flex items-center justify-center">
+              <span className="w-9 h-9 rounded-full bg-[#222222] text-[#ffffff] flex items-center justify-center">
                 <span className="material-symbols-outlined text-lg">calculate</span>
               </span>
             </div>
 
             {/* Spec breakdown */}
-            <div className="py-4 space-y-2.5 text-xs text-[#50443e] border-b border-[#d5c3bb]">
+            <div className="py-4 space-y-2.5 text-xs text-[#aaaaaa] border-b border-[#444444]">
               <div className="flex justify-between">
                 <span className="font-medium">Pieza:</span>
-                <span className="font-semibold text-[#412311]">{currentPiece.name}</span>
+                <span className="font-semibold text-[#ffffff]">{currentPiece.name}</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Dimensiones:</span>
-                <span className="font-semibold text-[#412311]">{length} × {width} cm</span>
+                <span className="font-semibold text-[#ffffff]">{length} × {width} cm</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Madera:</span>
-                <span className="font-semibold text-[#412311]">{selectedWood}</span>
+                <span className="font-semibold text-[#ffffff]">{selectedWood}</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Acabado:</span>
-                <span className="font-semibold text-[#412311] text-right truncate max-w-[140px] sm:max-w-[190px]">{selectedFinish}</span>
+                <span className="font-semibold text-[#ffffff] text-right truncate max-w-[140px] sm:max-w-[190px]">{selectedFinish}</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Ensamble:</span>
-                <span className="font-semibold text-[#412311] text-right truncate max-w-[140px] sm:max-w-[190px]">{selectedJoinery}</span>
+                <span className="font-semibold text-[#ffffff] text-right truncate max-w-[140px] sm:max-w-[190px]">{selectedJoinery}</span>
               </div>
               <div className="flex justify-between pt-1">
                 <span className="font-medium">Horas de banco estimadas:</span>
-                <span className="font-semibold text-[#895110]">{calculation.hoursEstimated} horas artesanales</span>
+                <span className="font-semibold text-[#e3000f]">{calculation.hoursEstimated} horas artesanales</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Plazo de curado y entrega:</span>
-                <span className="font-semibold text-[#412311]">{calculation.leadWeeks}</span>
+                <span className="font-semibold text-[#ffffff]">{calculation.leadWeeks}</span>
               </div>
             </div>
 
             {/* Price Box */}
             <div className="py-6 text-center">
-              <span className="text-xs text-[#895110] font-semibold uppercase tracking-wider block mb-1">
+              <span className="text-xs text-[#e3000f] font-semibold uppercase tracking-wider block mb-1">
                 Rango Estimado en Taller
               </span>
-              <div className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#412311] tracking-tight">
+              <div className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#ffffff] tracking-tight">
                 {calculation.minPrice.toLocaleString('es-ES')} € — {calculation.maxPrice.toLocaleString('es-ES')} €
               </div>
-              <span className="text-[11px] text-[#50443e] block mt-1 font-light">
+              <span className="text-[11px] text-[#aaaaaa] block mt-1 font-light">
                 *IVA incluido. Incluye transporte especializado e instalación en planta peninsular.
               </span>
             </div>
@@ -361,7 +361,7 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
             <div className="space-y-3 pt-2">
               <button
                 onClick={handleTransferToQuote}
-                className="w-full py-3.5 px-6 rounded-lg bg-[#bd5338] hover:bg-[#a6452e] text-white font-semibold text-xs tracking-wider uppercase transition-colors cursor-pointer shadow-sm flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-6 rounded-lg bg-[#e3000f] hover:bg-[#b3000c] text-white font-semibold text-xs tracking-wider uppercase transition-colors cursor-pointer shadow-sm flex items-center justify-center gap-2"
               >
                 <span>Solicitar Presupuesto Formal</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -369,7 +369,7 @@ export default function PreciosScreen({ onNavigate, onSendConfigToQuote }: Preci
 
               <button
                 onClick={() => onNavigate('inicio', 'contacto')}
-                className="w-full py-2.5 px-4 rounded-lg bg-[#f0eee8] text-[#50443e] hover:text-[#412311] font-medium text-xs tracking-wider uppercase transition-colors"
+                className="w-full py-2.5 px-4 rounded-lg bg-[#1c1c1c] text-[#aaaaaa] hover:text-[#ffffff] font-medium text-xs tracking-wider uppercase transition-colors"
               >
                 Consultar dudas con un ebanista
               </button>

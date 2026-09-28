@@ -66,37 +66,37 @@ export default function DossierModal({ isOpen, onClose }: DossierModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-xs animate-fadeIn">
-      <div className="relative w-full max-w-2xl bg-[#fcf9f3] rounded-xl border border-[#d5c3bb] shadow-2xl p-6 sm:p-8">
+      <div className="relative w-full max-w-2xl bg-[#111111] rounded-xl border border-[#444444] shadow-2xl p-6 sm:p-8">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#f0eee8] hover:bg-[#412311] hover:text-white text-[#412311] border border-[#d5c3bb] flex items-center justify-center transition-colors cursor-pointer"
+          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#1c1c1c] hover:bg-[#111111] hover:text-white text-[#ffffff] border border-[#444444] flex items-center justify-center transition-colors cursor-pointer"
         >
           <span className="material-symbols-outlined text-lg">close</span>
         </button>
 
         <div className="flex items-center gap-3 mb-4">
-          <span className="w-10 h-10 rounded-full bg-[#ffdcbf] text-[#2d1600] flex items-center justify-center">
+          <span className="w-10 h-10 rounded-full bg-[#e3000f] text-[#ffffff] flex items-center justify-center">
             <span className="material-symbols-outlined text-xl">menu_book</span>
           </span>
           <div>
-            <span className="text-[11px] uppercase tracking-widest text-[#895110] font-semibold block">
+            <span className="text-[11px] uppercase tracking-widest text-[#e3000f] font-semibold block">
               Publicación Editorial
             </span>
-            <h3 className="font-serif text-2xl text-[#412311]">
+            <h3 className="font-serif text-2xl text-[#ffffff]">
               Dossier de Arquitectura & Ebanistería 2024
             </h3>
           </div>
         </div>
 
-        <p className="text-xs sm:text-sm text-[#50443e] font-light leading-relaxed mb-6">
+        <p className="text-xs sm:text-sm text-[#aaaaaa] font-light leading-relaxed mb-6">
           Un volumen de más de 80 páginas impreso en papel offset de 150g, ahora disponible en formato digital con planos constructivos, desglose botánico y reportajes fotográficos a gran formato.
         </p>
 
         {/* Page Preview Selector */}
-        <div className="bg-[#f0eee8] p-4 rounded-lg border border-[#d5c3bb] mb-6">
-          <div className="flex items-center justify-between text-xs font-semibold text-[#412311] mb-2">
+        <div className="bg-[#1c1c1c] p-4 rounded-lg border border-[#444444] mb-6">
+          <div className="flex items-center justify-between text-xs font-semibold text-[#ffffff] mb-2">
             <span>Vista previa de capítulos:</span>
-            <span className="text-[#895110]">Sección {activePage} de {pages.length}</span>
+            <span className="text-[#e3000f]">Sección {activePage} de {pages.length}</span>
           </div>
 
           <div className="grid grid-cols-4 gap-2 mb-3">
@@ -106,8 +106,8 @@ export default function DossierModal({ isOpen, onClose }: DossierModalProps) {
                 onClick={() => setActivePage(p.page)}
                 className={`py-1.5 px-2 rounded text-xs font-medium transition-colors ${
                   activePage === p.page
-                    ? 'bg-[#412311] text-white'
-                    : 'bg-white text-[#50443e] hover:bg-[#ebe8e2]'
+                    ? 'bg-[#111111] text-white'
+                    : 'bg-[#151515] text-[#aaaaaa] hover:bg-[#1a1a1a]'
                 }`}
               >
                 Pág. {p.page * 20}
@@ -115,31 +115,31 @@ export default function DossierModal({ isOpen, onClose }: DossierModalProps) {
             ))}
           </div>
 
-          <div className="p-3 bg-white rounded border border-[#d5c3bb]">
-            <h5 className="font-serif text-sm font-semibold text-[#412311]">
+          <div className="p-3 bg-[#151515] rounded border border-[#444444]">
+            <h5 className="font-serif text-sm font-semibold text-[#ffffff]">
               {pages[activePage - 1].title}
             </h5>
-            <p className="text-xs text-[#50443e] font-light mt-1">
+            <p className="text-xs text-[#aaaaaa] font-light mt-1">
               {pages[activePage - 1].content}
             </p>
           </div>
         </div>
 
         {/* Download Action */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 border-t border-[#d5c3bb]">
-          <span className="text-xs text-[#50443e] flex items-center gap-1.5 font-light">
-            <span className="material-symbols-outlined text-sm text-[#895110]">verified</span>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 border-t border-[#444444]">
+          <span className="text-xs text-[#aaaaaa] flex items-center gap-1.5 font-light">
+            <span className="material-symbols-outlined text-sm text-[#e3000f]">verified</span>
             <span>Edición digital en alta resolución (PDF, 28 MB)</span>
           </span>
 
           <button
             onClick={handleDownload}
             disabled={downloading}
-            className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#bd5338] hover:bg-[#a6452e] text-white font-semibold text-xs tracking-wider uppercase transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+            className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#e3000f] hover:bg-[#b3000c] text-white font-semibold text-xs tracking-wider uppercase transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-sm"
           >
             {downloading ? (
               <>
-                <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                <span className="inline-block w-4 h-4 border-2 border-[#333333] border-t-transparent rounded-full animate-spin"></span>
                 <span>Generando PDF...</span>
               </>
             ) : downloaded ? (

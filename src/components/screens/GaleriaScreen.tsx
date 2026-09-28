@@ -10,7 +10,7 @@ interface GaleriaScreenProps {
 
 export default function GaleriaScreen({ onNavigate, onSelectPiece, onOpenQuoteModal }: GaleriaScreenProps) {
   return (
-    <div className="pt-24 bg-[#fcf9f3] min-h-screen">
+    <div className="pt-24 bg-[#111111] min-h-screen">
       <CreacionesGallery 
         onSelectPiece={onSelectPiece} 
         onContactClick={onOpenQuoteModal} 

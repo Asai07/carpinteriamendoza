@@ -94,7 +94,7 @@ export default function App() {
   }, [currentScreen]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fcf9f3] text-[#1c1c18] font-sans selection:bg-[#412311] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#111111] text-[#ffffff] font-sans selection:bg-[#111111] selection:text-white">
       {/* Top Header */}
       <Header
         currentScreen={currentScreen}

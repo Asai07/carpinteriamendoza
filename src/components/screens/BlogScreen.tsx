@@ -13,40 +13,40 @@ export default function BlogScreen({ onNavigate, onOpenDossier }: BlogScreenProp
   const selectedPost = BLOG_POSTS.find(p => p.id === selectedPostId);
 
   return (
-    <div className="bg-[#fcf9f3] py-16 lg:py-24">
+    <div className="bg-[#111111] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* Breadcrumb */}
         <div className="mb-8">
-          <div className="flex items-center gap-2 text-xs text-[#895110] mb-3">
+          <div className="flex items-center gap-2 text-xs text-[#e3000f] mb-3">
             <button
               onClick={() => onNavigate('inicio')}
-              className="hover:underline text-[#50443e]"
+              className="hover:underline text-[#aaaaaa]"
             >
               Inicio
             </button>
             <span>/</span>
             <span className="font-semibold uppercase tracking-wider">Blog & Cuaderno de Virutas</span>
           </div>
-          <span className="text-xs uppercase tracking-widest text-[#895110] font-semibold block mb-2">
+          <span className="text-xs uppercase tracking-widest text-[#e3000f] font-semibold block mb-2">
             Cuaderno de Banco
           </span>
-          <h1 className="font-serif text-3xl sm:text-5xl text-[#412311] leading-tight max-w-3xl">
+          <h1 className="font-serif text-3xl sm:text-5xl text-[#ffffff] leading-tight max-w-3xl">
             Reflexiones sobre el grano, la física del secado y el oficio de la garlopa.
           </h1>
         </div>
 
         {/* Selected Article Full View */}
         {selectedPost ? (
-          <div className="bg-white p-8 lg:p-12 rounded-xl border border-[#d5c3bb] shadow-sm mb-16 max-w-4xl mx-auto animate-fadeIn">
+          <div className="bg-[#151515] p-8 lg:p-12 rounded-xl border border-[#444444] shadow-sm mb-16 max-w-4xl mx-auto animate-fadeIn">
             <button
               onClick={() => setSelectedPostId(null)}
-              className="inline-flex items-center gap-1 text-xs text-[#895110] hover:text-[#412311] font-semibold uppercase tracking-wider mb-6 cursor-pointer"
+              className="inline-flex items-center gap-1 text-xs text-[#e3000f] hover:text-[#ffffff] font-semibold uppercase tracking-wider mb-6 cursor-pointer"
             >
               <span className="material-symbols-outlined text-sm">arrow_back</span>
               <span>Volver a todos los artículos</span>
             </button>
 
-            <div className="flex items-center gap-3 text-xs text-[#895110] mb-3">
+            <div className="flex items-center gap-3 text-xs text-[#e3000f] mb-3">
               <span className="font-semibold">{selectedPost.category}</span>
               <span>·</span>
               <span>{selectedPost.date}</span>
@@ -54,21 +54,21 @@ export default function BlogScreen({ onNavigate, onOpenDossier }: BlogScreenProp
               <span>{selectedPost.readTime}</span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-4xl text-[#412311] mb-2 leading-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#ffffff] mb-2 leading-tight">
               {selectedPost.title}
             </h2>
-            <p className="text-base text-[#895110] font-medium mb-8">
+            <p className="text-base text-[#e3000f] font-medium mb-8">
               {selectedPost.subtitle}
             </p>
 
-            <div className="prose prose-stone max-w-none text-sm text-[#50443e] font-light leading-relaxed space-y-4 border-t border-[#d5c3bb] pt-6">
+            <div className="prose prose-stone max-w-none text-sm text-[#aaaaaa] font-light leading-relaxed space-y-4 border-t border-[#444444] pt-6">
               <p>
                 {selectedPost.excerpt}
               </p>
               <p>
                 Cuando un árbol es talado, sus células retienen una cantidad masiva de agua libre y agua de saturación. Si un ebanista se apresura a trabajar esa madera antes de que alcance el equilibrio con la humedad ambiental relativa (habitualmente entre el 45% y el 55%), las fuerzas higrométricas ejercerán una torsión implacable.
               </p>
-              <blockquote className="p-4 bg-[#f0eee8] rounded-lg border-l-4 border-[#895110] italic text-[#412311] my-6 font-serif">
+              <blockquote className="p-4 bg-[#1c1c1c] rounded-lg border-l-4 border-[#e3000f] italic text-[#ffffff] my-6 font-serif">
                 “La madera viva nunca muere; simplemente baila con la humedad de la habitación. Si conoces el paso del baile, la mesa no crujirá jamás.”
               </blockquote>
               <p>
@@ -76,11 +76,11 @@ export default function BlogScreen({ onNavigate, onOpenDossier }: BlogScreenProp
               </p>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-[#d5c3bb] flex items-center justify-between">
-              <span className="text-xs text-[#50443e]">Escrito por el Maestro Ebanista en Cassà de la Selva</span>
+            <div className="mt-8 pt-6 border-t border-[#444444] flex items-center justify-between">
+              <span className="text-xs text-[#aaaaaa]">Escrito por el Maestro Ebanista en Cassà de la Selva</span>
               <button
                 onClick={() => setSelectedPostId(null)}
-                className="px-4 py-2 rounded bg-[#f0eee8] hover:bg-[#ebe8e2] text-xs font-semibold text-[#412311] transition-colors"
+                className="px-4 py-2 rounded bg-[#1c1c1c] hover:bg-[#1a1a1a] text-xs font-semibold text-[#ffffff] transition-colors"
               >
                 Cerrar lectura
               </button>
@@ -93,28 +93,28 @@ export default function BlogScreen({ onNavigate, onOpenDossier }: BlogScreenProp
               <article
                 key={post.id}
                 onClick={() => setSelectedPostId(post.id)}
-                className="bg-white p-6 sm:p-8 rounded-xl border border-[#d5c3bb] hover:border-[#412311] hover:shadow-lg transition-all duration-300 flex flex-col justify-between cursor-pointer group"
+                className="bg-[#151515] p-6 sm:p-8 rounded-xl border border-[#444444] hover:border-[#333333] hover:shadow-lg transition-all duration-300 flex flex-col justify-between cursor-pointer group"
               >
                 <div>
-                  <div className="flex items-center justify-between text-[11px] text-[#895110] font-semibold uppercase tracking-wider mb-3">
+                  <div className="flex items-center justify-between text-[11px] text-[#e3000f] font-semibold uppercase tracking-wider mb-3">
                     <span>{post.category}</span>
                     <span>{post.readTime}</span>
                   </div>
 
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#412311] group-hover:text-[#bd5338] transition-colors mb-2 leading-snug">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#ffffff] group-hover:text-[#e3000f] transition-colors mb-2 leading-snug">
                     {post.title}
                   </h3>
 
-                  <p className="text-xs text-[#895110] font-medium mb-4">
+                  <p className="text-xs text-[#e3000f] font-medium mb-4">
                     {post.subtitle}
                   </p>
 
-                  <p className="text-xs text-[#50443e] font-light leading-relaxed mb-6">
+                  <p className="text-xs text-[#aaaaaa] font-light leading-relaxed mb-6">
                     {post.excerpt}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#d5c3bb] flex items-center justify-between text-xs text-[#412311] font-semibold group-hover:text-[#bd5338]">
+                <div className="pt-4 border-t border-[#444444] flex items-center justify-between text-xs text-[#ffffff] font-semibold group-hover:text-[#e3000f]">
                   <span>Leer ensayo completo</span>
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </div>
@@ -124,23 +124,23 @@ export default function BlogScreen({ onNavigate, onOpenDossier }: BlogScreenProp
         )}
 
         {/* Dossier Banner */}
-        <div className="p-5 sm:p-8 rounded-xl bg-[#f0eee8] border border-[#d5c3bb] flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="p-5 sm:p-8 rounded-xl bg-[#1c1c1c] border border-[#444444] flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <span className="w-12 h-12 rounded-full bg-[#ffdcbf] text-[#2d1600] flex items-center justify-center shrink-0">
+            <span className="w-12 h-12 rounded-full bg-[#e3000f] text-[#ffffff] flex items-center justify-center shrink-0">
               <span className="material-symbols-outlined text-2xl">menu_book</span>
             </span>
             <div>
-              <h4 className="font-serif text-xl text-[#412311]">
+              <h4 className="font-serif text-xl text-[#ffffff]">
                 ¿Quieres profundizar en el oficio tradicional?
               </h4>
-              <p className="text-xs sm:text-sm text-[#50443e] font-light mt-0.5">
+              <p className="text-xs sm:text-sm text-[#aaaaaa] font-light mt-0.5">
                 Nuestro dossier incluye capítulos técnicos con esquemas de corte en cuartos, secado solar y recetas de acabados.
               </p>
             </div>
           </div>
           <button
             onClick={onOpenDossier}
-            className="px-6 py-3 rounded-lg bg-[#412311] hover:bg-[#5a3825] text-white text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer shrink-0 shadow-sm"
+            className="px-6 py-3 rounded-lg bg-[#111111] hover:bg-[#222222] text-white text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer shrink-0 shadow-sm"
           >
             Descargar Dossier
           </button>

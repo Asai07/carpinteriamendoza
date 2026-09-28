@@ -15,7 +15,7 @@ export default function PieceDetailModal({ piece, onClose }: PieceDetailModalPro
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute -top-4 -right-4 md:-top-5 md:-right-5 z-10 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/20 flex items-center justify-center transition-colors cursor-pointer"
+          className="absolute -top-4 -right-4 md:-top-5 md:-right-5 z-10 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white border border-[#333333] flex items-center justify-center transition-colors cursor-pointer"
           aria-label="Cerrar modal"
         >
           <span className="material-symbols-outlined text-xl">close</span>
