@@ -1,0 +1,6 @@
+{
+  "name": "Taller Ebanistería Woody",
+  "description": "Carpintería de autor, mobiliario a medida y piezas de ebanistería arquitectónica concebidas con respeto a la madera noble y al oficio tradicional.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
