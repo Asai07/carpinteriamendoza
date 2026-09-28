@@ -93,7 +93,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         {/* Marca Gigante (Sello de Autoridad Visual) */}
         <div className="w-full flex justify-center items-center py-6 relative z-0 border-t border-[#d5c3bb]">
-          <h2 className="text-[15vw] sm:text-[11vw] md:text-[9vw] lg:text-[7vw] font-serif font-bold text-[#3a2618] leading-none tracking-tighter select-none opacity-5">
+          <h2 className="text-[15vw] sm:text-[11vw] md:text-[9vw] lg:text-[7vw] font-serif font-bold text-[#3a2618] leading-none tracking-tighter select-none opacity-5 text-center">
             Carpintería Mendoza
           </h2>
         </div>

@@ -107,7 +107,7 @@ export default function ContactoCotizacionSection({
                   <h4 className="text-[11px] font-bold text-[#bd5338] uppercase tracking-widest mb-1">
                     Correo
                   </h4>
-                  <p className="text-sm text-[#3a2618] font-medium">
+                  <p className="text-sm text-[#3a2618] font-medium break-all">
                     carpinteriamendoza_david@hotmail.com
                   </p>
                 </div>
